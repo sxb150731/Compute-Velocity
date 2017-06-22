@@ -1,0 +1,19 @@
+Time duration between two frames = 94764 - 92331 = 2433 miliseconds
+
+
+In order to read the matrix files and use them appropriately follow below example.
+
+The Intrinsic RGB matrix file contains:
+ 
+1027 0 0 3.4052 1029.9 0 968 536.54 1
+ 
+Corresponding 3x3 matrix would be:
+ 
+    m = [1027        0        0 ]
+        [3.4052    1029.9     0 ]  
+        [968       563.54     1 ]
+ 
+Assuming it is a right hand coordinate system, we can do the transformation as follows:
+p = [x y z]
+applying transformation corresponding to m to p can be performed as:
+p*m
